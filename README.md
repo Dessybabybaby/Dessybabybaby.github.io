@@ -11,12 +11,12 @@
 
 ## What This Portfolio Demonstrates
 
-**Security monitoring automation** 
-**Vulnerability intelligence ingestion and triage**
-**Log analysis and detection scripting**
-**OSINT-based exposure monitoring**
-**Infrastructure hardening practices**
-**Communicating Securtiy**
+**Security monitoring automation.** 
+**Vulnerability intelligence ingestion and triage.**
+**Log analysis and detection scripting.**
+**OSINT-based exposure monitoring.**
+**Infrastructure hardening practices.**
+**Communicating Securtiy.**
 
 ---
 
