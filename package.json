@@ -1,8 +1,10 @@
 {
-  "name": "@lexington/starter",
+  "name": "achusi-desmond-portfolio",
   "type": "module",
-  "version": "0.0.1",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "author": "Achusi Desmond",
+  "description": "Professional Cybersecurity & IT Operations Portfolio",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

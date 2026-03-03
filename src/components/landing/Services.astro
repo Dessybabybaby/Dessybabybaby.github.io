@@ -1,45 +1,45 @@
 ---
 import BgGrid from "@/components/assets/BgGrid.astro";
 
-const services = [
+const competencies = [
   {
-    title: "Design in Figma or the Browser",
+    title: "Security Automation",
     description:
-      "Whether designing in Figma or directly in the browser, I craft interfaces that are both clean and user-friendly. Every layout is tailored to fit your unique goals and audience.",
+      "Architecting automated workflows using n8n and Python to streamline threat intelligence, vulnerability monitoring, and incident response tasks.",
   },
   {
-    title: "Redesign Existing Websites",
+    title: "Infrastructure Defense",
     description:
-      "Got a website that needs a refresh? I’ll review your current design and rework it into something modern, intuitive, and more engaging — both visually and functionally.",
+      "Hardening Linux and Windows environments, configuring firewalls, and implementing network security protocols to ensure system integrity.",
   },
   {
-    title: "Convert to Tailwind & Astro",
+    title: "OSINT & Reconnaissance",
     description:
-      "I can help upgrade your current project by converting it to use Tailwind CSS and Astro — improving performance, reducing complexity, and boosting maintainability.",
+      "Utilizing advanced open-source intelligence techniques for data harvesting, credential exposure monitoring, and threat surface analysis.",
   },
   {
-    title: "Full Website Development",
+    title: "Compliance & Auditing",
     description:
-      "I build fast, responsive websites using Tailwind CSS and Astro. The result: polished, lightweight pages that elevate your brand and support your business goals.",
+      "Conducting systematic reviews of IT infrastructure to identify security gaps and ensure alignment with industry standards and best practices.",
   },
 ];
 ---
 
-<section class="border-white/20 border-b divide-y divide-white/20">
+<section class="border-white/10 border-b divide-y divide-white/10 bg-[#0a0a0a]">
   <div class="px-8 py-6 relative">
     <BgGrid />
-    <h2 class="text-3xl font-black text-white uppercase">
-      our services; Explained
+    <h2 class="text-3xl font-black text-white uppercase tracking-tighter">
+      Technical // Capabilities
     </h2>
   </div>
   <div
-    class="text-white text-xs gap-3 gap-y-12 grid grid-cols-1 md:grid-cols-4 "
+    class="text-white gap-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10"
   >
     {
-      services.map(({ title, description }) => (
-        <div class="p-8">
-          <h3 class="text-lg uppercase font-black text-white">{title}</h3>
-          <p class="mt-3 text-eagle text-sm">{description}</p>
+      competencies.map(({ title, description }) => (
+        <div class="p-8 group hover:bg-white/[0.02] transition-colors duration-500">
+          <h3 class="text-sm uppercase font-bold text-[#ff5f1f] tracking-widest font-mono">{title}</h3>
+          <p class="mt-4 text-white/50 text-sm leading-relaxed font-light">{description}</p>
         </div>
       ))
     }

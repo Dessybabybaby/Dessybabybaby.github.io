@@ -1,21 +1,29 @@
 ---
 import Banner from "@/components/landing/Banner.astro";
 import Testimonials from "@/components/landing/Testimonials.astro";
-// Assets
 import BgGrid from "@/components/assets/BgGrid.astro";
 ---
 
-<section class="border-white/20 border-b">
-  <div class="bg-grid p-8 relative">
+<section class="border-white/10 border-b bg-[#0a0a0a]">
+  <div class="p-8 md:p-16 relative overflow-hidden">
     <BgGrid />
 
-    <h1
-      class="text-white tracking-tighter font-black uppercase text-3xl lg:text-8xl relative"
-    >
-      Maximize your online presence with a unique and engaging one-page website
-      that delivers outstanding results.
-    </h1>
+    <div class="relative z-10 max-w-5xl">
+      <p class="text-[#ff5f1f] font-mono text-xs mb-4 tracking-[0.3em] uppercase opacity-80">
+        Professional Brief // 2026
+      </p>
+      
+      <h1 class="text-white tracking-tight font-bold text-5xl lg:text-8xl mb-8 leading-[0.9]">
+        Achusi Desmond.
+      </h1>
+
+      <p class="text-white/50 text-xl lg:text-2xl font-light max-w-3xl leading-relaxed">
+        Building resilient infrastructure and securing digital operations. 
+        Focusing on system integrity, network defense, and scalable IT solutions.
+      </p>
+    </div>
   </div>
+  
   <Banner />
   <Testimonials />
 </section>

@@ -1,54 +1,65 @@
-# Astro & Tailwind CSS Starter Kit by lexingtonthemes.com
+# Achusi Desmond | Cybersecurity & IT Operations Portfolio
 
-## License
+> I build and automate secure IT environments that improve threat visibility, reduce incident response time, and harden infrastructure against operational and cyber risks.
 
-This template is open-source software licensed under the [GPL-3.0 license](https://opensource.org/licenses/GPL-3.0). Feel free to fork, modify, and use it in your projects.
-## Before using this template publicly, please ensure you remove my name and any links associated with me from the website.
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE.txt)
+[![Astro](https://img.shields.io/badge/Astro-v5.0+-ff5f1f)](https://astro.build)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-38bdf8)](https://tailwindcss.com)
+[![Deployment: GitHub Pages](https://img.shields.io/badge/Deployment-GitHub_Pages-2ea44f)](https://dessybabybaby.github.io)
 
-## This template is using Tailwind CSS V4
+---
 
-Now we are using only a CSS file. It's called `global.css` and it's located in the src/styles folder. Now we are eimporting Tailwind CSS on the same file instead of using the `tailwind.config.cjs` file. Like this:
+## What This Portfolio Demonstrates
 
-```css
-// Importing Tailwind CSS
-@import "tailwindcss";
-// Importing Tailwind plugins
-@plugin "@tailwindcss/typography";
-@plugin "@tailwindcss/forms";
-```
+**Security monitoring automation** 
+**Vulnerability intelligence ingestion and triage**
+**Log analysis and detection scripting**
+**OSINT-based exposure monitoring**
+**Infrastructure hardening practices**
+**Communicating Securtiy**
 
-Then to add your styles you will use the @theme directive. Like this:
+---
 
-```css
-@theme {
-  /* Your CSS goes here, see how styles are written on the global.css file */
-}
-```
+## Technical Features
 
-Remember this is just in Alpha version, so you can use it as you want. Just keep an eye on the changes that Tailwind CSS is going to make.
-## Template Structure
-Inside of your Astro project, you'll see the following folders and files:
-```
+* **Python**
+* **n8n**
+* **GitHub Actions (CI/CD)**
+* **Astro (static site framework for portfolio deployment)**
+
+---
+
+## Selected Security Pipelines
+
+1.  **[CVE-RSS Alert System](https://github.com/Dessybabybaby/cve-rss-alert-system)**: Real-time vulnerability monitoring and risk evaluation.
+2.  **[Secret Exposure Pipeline](https://github.com/Dessybabybaby/secret-exposure-monitoring-pipeline)**: Automated scanning for leaked public credentials.
+3.  **[OSINT Email Harvester](https://github.com/Dessybabybaby/osint-email-harvester)**: Security research tool for data harvesting and validation.
+4.  **[Log File Analyzer](https://github.com/Dessybabybaby/log-file-analyzer)**: Automated threat detection within server system logs.
+
+---
+
+## Development Setup
+
+This project uses the Tailwind CSS V4 engine. Configuration is handled directly via `src/styles/global.css`.
+
+### Commands
+
+All commands are run from the root of the project:
+
+| Command | Action |
+| :--- | :--- |
+| `npm install` | Installs project dependencies |
+| `npm run dev` | Starts local dev server at `localhost:4321` |
+| `npm run build` | Builds production site to `./dist/` |
+| `npm run preview` | Previews the production build locally |
+
+### Project Structure
+```text
 /
-├── public/
+├── public/          # Static assets (Favicons, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-Any static assets, like images, can be placed in the `public/` directory.
-
-## Commands
-All commands are run from the root of the project, from a terminal:
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-## Want to learn more?
-Feel free to check Astros [documentation](https://docs.astro.build)
+│   ├── components/  # Modular Astro components (Hero, Work, Intro)
+│   ├── layouts/     # Base HTML structure
+│   ├── pages/       # Routing (index.astro)
+│   └── styles/      # Tailwind V4 CSS configuration (global.css)
+└── package.json     # Project metadata and dependencies
