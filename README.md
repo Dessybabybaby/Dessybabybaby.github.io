@@ -1,6 +1,6 @@
-# Achusi Desmond | Cybersecurity & IT Operations Portfolio
+# Achusi Desmond | SOC Automation  Engineer Portfolio
 
-> I build and automate secure IT environments that improve threat visibility, reduce incident response time, and harden infrastructure against operational and cyber risks.
+> I build automation systems that align IT operations with advanced security monitoring, leveraging AIOps and zero-trust framework to reduce downtime, and deploy resilient systems that scale with AI workloads.
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE.txt)
 [![Astro](https://img.shields.io/badge/Astro-v5.0+-ff5f1f)](https://astro.build)
@@ -16,13 +16,14 @@
 **Log analysis and detection scripting.**
 **OSINT-based exposure monitoring.**
 **Infrastructure hardening practices.**
-**Communicating Securtiy.**
+**Communicating securtiy.**
 
 ---
 
 ## Technical Features
 
 * **Python**
+* **Java Script**
 * **n8n**
 * **GitHub Actions (CI/CD)**
 * **Astro (static site framework for portfolio deployment)**
