@@ -1,0 +1,5 @@
+{
+    "chat.tools.terminal.ignoreDefaultAutoApproveRules": false,
+    "search.useGlobalIgnoreFiles": true,
+    "search.useIgnoreFiles": true
+}

@@ -1,0 +1,85 @@
+---
+import BgGrid from "@/components/assets/BgGrid.astro";
+
+const projects = [
+  {
+    name: "CVE-RSS Alert System",
+    problem: "Security teams spend 4+ hours weekly manually checking NVD/CISA databases, risking missed 'Zero-Day' threats.",
+    impact: "95% reduction in manual monitoring time. 60% reduction in alert noise via CVSS logic-based filtering.",
+    stack: "n8n, NVD API, CISA Feed",
+    link: "https://github.com/Dessybabybaby/cve-rss-alert-system",
+  },
+  {
+    name: "Secret Exposure Pipeline",
+    problem: "Accidental credential commits in public repos create immediate entry points for attackers.",
+    impact: "Real-time detection of 15+ secret types. Continuous monitoring of attack surface with 0ms manual oversight.",
+    stack: "Regex, GitHub API, n8n",
+    link: "https://github.com/Dessybabybaby/secret-exposure-monitoring-pipeline",
+  },
+  {
+    name: "OSINT Email Harvester",
+    problem: "Manual reconnaissance for phishing simulations is time-expensive and prone to data errors.",
+    impact: "Reduced recon phase from hours to seconds. Improved simulation accuracy by 40% via automated validation.",
+    stack: "Regex, RFC 5322, n8n",
+    link: "https://github.com/Dessybabybaby/osint-email-harvester",
+  }
+];
+---
+
+<section class="border-b border-white/10 bg-[#0a0a0a]">
+  <div class="px-8 py-12 relative border-b border-white/10">
+    <BgGrid />
+    <p class="text-[#ff5f1f] font-mono text-[10px] mb-4 tracking-[0.4em] uppercase opacity-60 relative">
+      // Operational Briefing
+    </p>
+    <h2 class="text-3xl md:text-5xl font-bold text-white uppercase tracking-tighter relative">
+      SOME PROJECTS <span class="text-white/20">& Case Studies</span>
+    </h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10 border-white/10">
+    {
+      projects.map((project) => (
+        <a 
+          href={project.link} 
+          target="_blank" 
+          class="p-8 group hover:bg-white/[0.02] transition-all duration-500 flex flex-col justify-between min-h-[450px]"
+        >
+          <div>
+            <div class="flex justify-end items-start mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4 text-white/20 group-hover:text-[#ff5f1f] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17L17 7"/></svg>
+            </div>
+
+            <h3 class="text-white text-xl font-bold uppercase tracking-tight mb-6 group-hover:text-[#ff5f1f] duration-300">
+              {project.name}
+            </h3>
+
+            <div class="mb-4">
+              <p class="text-[#ff5f1f]/60 text-[9px] font-mono uppercase tracking-[0.2em] mb-1">Problem Statement</p>
+              <p class="text-white/50 text-xs font-light leading-relaxed italic">
+                "{project.problem}"
+              </p>
+            </div>
+
+            <div class="mb-4">
+              <p class="text-[#ff5f1f] text-[9px] font-mono uppercase tracking-[0.2em] mb-1">Operational Impact</p>
+              <p class="text-white text-sm font-bold leading-tight uppercase tracking-tight">
+                {project.impact}
+              </p>
+            </div>
+            
+             <div class="mt-4">
+              <p class="text-white/20 text-[9px] font-mono uppercase tracking-[0.2em] mb-1">Environment / Stack</p>
+              <p class="text-white/40 text-[10px] uppercase font-mono">{project.stack}</p>
+            </div>
+          </div>
+          
+          <div class="mt-8 flex items-center gap-2 text-[10px] font-mono text-[#ff5f1f] uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+            <span>Access Technical Briefing</span>
+            <span class="animate-pulse">_</span>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</section>

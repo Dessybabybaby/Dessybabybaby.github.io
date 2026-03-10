@@ -1,0 +1,47 @@
+---
+const testimonials = [
+  {
+    text: "Achusi has been efficient, professional, organized, and a fantastic team player. He has my highest recommendation for positions involving compliance and audit.",
+    author: "Jafar Mohammed Umar",
+    title: "DevSecOps Engineer | Cloud Security & Automation",
+  },
+  {
+    text: "Desmond’s guidance and coaching have been invaluable in developing cybersecurity skills. His expertise and dedicated mentorship significantly contribute to technical growth in this field.",
+    author: "Chibuike David",
+    title: "Community Coordinator & Technical Mentor",
+  },
+  {
+    text: "During our collaboration on undergraduate Computer Science projects, Desmond demonstrated an exceptional ability to break down complex networking and software development concepts into actionable knowledge.",
+    author: "Blessing Olorunsola",
+    title: "Marketing Executive | CS Graduate, University of Abuja",
+  },
+];
+---
+
+<section class="border-white/10 border-b bg-[#0a0a0a]">
+  <div class="p-8 md:p-16">
+    <p class="text-[#ff5f1f] font-mono text-[10px] mb-12 tracking-[0.4em] uppercase opacity-60">
+      // Industry Endorsements
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
+      {
+        testimonials.map((item) => (
+          <figure class="flex flex-col justify-between h-full group">
+            <blockquote class="text-white/60 font-light text-sm leading-relaxed italic border-l border-white/10 pl-5 group-hover:border-[#ff5f1f] duration-500 transition-colors">
+              "{item.text}"
+            </blockquote>
+            <figcaption class="mt-8 not-italic">
+              <span class="block font-bold text-xs uppercase tracking-[0.2em] text-white">
+                {item.author}
+              </span>
+              <cite class="block text-white/30 text-[10px] uppercase mt-2 not-italic font-mono leading-tight">
+                {item.title}
+              </cite>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</section>
