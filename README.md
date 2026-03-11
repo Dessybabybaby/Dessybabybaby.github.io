@@ -26,7 +26,7 @@
 * **Java Script**
 * **n8n**
 * **GitHub Actions (CI/CD)**
-* **Astro (static site framework for portfolio deployment)**
+* **Astro**
 
 ---
 
