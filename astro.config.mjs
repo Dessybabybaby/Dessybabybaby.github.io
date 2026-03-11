@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'; 
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from "@astrojs/sitemap";
 
@@ -6,8 +6,11 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  //
-  site: 'https://Dessybabybaby.github.io',
+  site: 'https://desmond-achusi.vercel.app', // your live Vercel URL
   compressHTML: true,
-  integrations: [sitemap()]
+  integrations: [sitemap()],
+  build: {
+    outDir: 'dist',   // Vercel will deploy from here
+  },
+  base: '/',           // ensures links work correctly
 });
