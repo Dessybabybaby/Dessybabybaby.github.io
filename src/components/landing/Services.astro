@@ -81,5 +81,42 @@ import BgGrid from "@/components/assets/BgGrid.astro";
       <div class="pb-16">
         <div class="border border-white/10 bg-black/40 backdrop-blur-sm relative rounded-sm overflow-hidden">
           <div class="bg-[#ff5f1f] text-black text-[9px] font-black px-3 py-1 uppercase tracking-tighter">
+            Logic: Risk_Scoring.js
           </div>
-          <pre class="p-6 text-[11px] leading-relaxed text-white/50 overflow-x-auto font-
+          <pre class="p-6 text-[11px] leading-relaxed text-white/50 overflow-x-auto font-mono">
+<code>{`// Extracted from n8n Workflow
+if (score >= 9) {
+  severity = "CRITICAL";
+  decision = "alert"; // Instant Gmail
+} else if (score >= 7.5) {
+  severity = "HIGH";
+  decision = "review"; // Manual Check
+} else {
+  severity = "LOW/MED";
+  decision = "log"; // Audit Only
+}`}</code>
+          </pre>
+        </div>
+      </div>
+
+      {/* Lessons Learned */}
+      <div class="pt-16">
+        <h3 class="text-white text-xs font-mono uppercase tracking-[0.3em] mb-8 flex items-center gap-3">
+          <span class="h-1.5 w-1.5 bg-[#ff5f1f]"></span> Deployment Lessons
+        </h3>
+        <p class="text-white/40 text-sm leading-relaxed mb-10 font-light italic">
+          "The biggest challenge was handling the NVD API rate limits and data inconsistency between CVSS versions. I optimized the workflow by implementing a <strong class="text-white/60 text-not-italic">Lookup node</strong> that only queries the API if the CVE is not already in the audit log, saving hundreds of unnecessary API calls daily."
+        </p>
+        <a 
+          href="https://github.com/Dessybabybaby/cve-rss-alert-system" 
+          target="_blank"
+          class="group inline-flex items-center gap-3 py-4 px-8 border border-[#ff5f1f]/30 text-[#ff5f1f] text-[10px] font-black uppercase tracking-[0.2em] hover:bg-[#ff5f1f] hover:text-black transition-all duration-300"
+        >
+          View Full JSON Workflow 
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-3 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
